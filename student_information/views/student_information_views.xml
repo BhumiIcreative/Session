@@ -16,9 +16,20 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="entroll_no"/>
-                        <field name="partner_id"/>
+                        <group>
+                            <field name="name"/>
+                            <field name="last_name"/>
+                            <field name="full_name"/>
+                            <field name="category"/>
+                            <field name="category_note"/>
+                        </group>
+                        <group>
+                            <field name="entroll_no"/>
+                            <field name="partner_id"/>
+                            <field name="email"/>
+                            <field name="birth_date"/>
+                            <field name="age"/>
+                        </group>
                     </group>
                     <notebook>
                         <page string="Education Info">
@@ -38,5 +49,6 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <menuitem id="menu_student_information" action='action_student_information' name="Students"/>
+    <menuitem id="menu_student_information" action='action_student_information'
+              name="Students"/>
 </odoo>
