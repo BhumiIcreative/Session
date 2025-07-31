@@ -5,16 +5,15 @@
         <field name="model">education.info</field>
         <field name="arch" type="xml">
             <list>
-
                 <field name="name"/>
                 <field name="percentage"/>
                 <field name="place"/>
                 <field name="student_id"/>
                 <field name="tag_ids" widget="many2many_tags"/>
-
             </list>
         </field>
     </record>
+
     <record id="education_info_form_view" model="ir.ui.view">
         <field name="name">education.info.form.view</field>
         <field name="model">education.info</field>
@@ -40,5 +39,5 @@
     </record>
 
     <menuitem id="menu_education_info" action='action_education_info' name="Education"
-              parent="menu_student_information"/>
+              parent="sub_menu_student_information"/>
 </odoo>

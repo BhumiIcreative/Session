@@ -1,0 +1,26 @@
+<odoo>
+    <record id="view_partner_student_form" model="ir.ui.view">
+        <field name="name">res.partner.student.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <page name="internal_notes" position="after">
+                <page name="internal_notes_1" string="Data 1">
+                    <group>
+                        <group col="2">
+                            <separator string="Warning on the Picking" colspan="2"/>
+                            <field name="student_id"/>
+                        </group>
+                    </group>
+                </page>
+            </page>
+
+            <xpath expr="//field[@name='category_id']">
+                <field name="student_id" options="{'no_create': True,'no_open': True}"/>
+            </xpath>
+            <xpath expr="//field[@name='category_id']" position="attributes">
+                <attribute name="options">{'color_field': 'color'}</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

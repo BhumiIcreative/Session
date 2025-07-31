@@ -35,5 +35,5 @@
     </record>
 
     <menuitem id="menu_education_info_tag" action='action_education_info_tag' name="Tags"
-              parent="menu_student_information"/>
+              parent="sub_menu_student_information"/>
 </odoo>
